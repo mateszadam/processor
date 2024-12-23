@@ -1,5 +1,5 @@
 export interface ProcessorModel {
-  id: number;
+  id?: number;
   name: string;
   manufacturer: string;
   price: number;

@@ -1,0 +1,123 @@
+<div class="oModalOuter">
+  <div class="oModal">
+    <form (submit)="saveEdit($event)" (reset)="cancelEdit()">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><label for="name" class="form-label">Név:</label></td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                [value]="processor?.name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="manufacturer" class="form-label">Gyártó:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="manufacturer"
+                [value]="processor?.manufacturer"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="price" class="form-label">Ár:</label></td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="price"
+                [value]="processor?.price"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="socket" class="form-label">Foglalat:</label></td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="socket"
+                [value]="processor?.socket"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="coreCount" class="form-label">Magok Száma:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="coreCount"
+                [value]="processor?.coreCount"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="threadCount" class="form-label">Szálak Száma:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="threadCount"
+                [value]="processor?.threadCount"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="baseClock" class="form-label">Alap Órajel:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="baseClock"
+                [value]="processor?.baseClock"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="boostClock" class="form-label">Turbó Órajel:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="boostClock"
+                [value]="processor?.boostClock"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      @if (errorMessage.length > 0) {
+      <div class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+      }
+
+      <div class="d-flex justify-content-between w-50 m-auto">
+        <button class="btn btn-outline-primary mt-3" type="submit">
+          Mentés
+        </button>
+        <button class="btn btn-outline-danger mt-3 float-end" type="reset">
+          Mégse
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
