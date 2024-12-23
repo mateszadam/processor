@@ -1,0 +1,41 @@
+<div class="card col-12 col-md-4" style="width: 18rem">
+  <div class="card-body flex-fill">
+    <h5 class="card-title text-decoration-underline font-monospace mb-0">
+      {{ processor?.name }}
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ processor?.manufacturer }}</h6>
+    <table class="table table-striped table-bordered mb-0">
+      <tr>
+        <td>Ár:</td>
+        <td>{{ processor?.price }}$</td>
+      </tr>
+      <tr>
+        <td>Magok száma:</td>
+        <td>{{ processor?.coreCount }}</td>
+      </tr>
+      <tr>
+        <td>Szálak száma:</td>
+        <td>{{ processor?.threadCount }}</td>
+      </tr>
+      <tr>
+        <td>Alap órajel:</td>
+        <td>{{ processor?.baseClock }}</td>
+      </tr>
+      <tr>
+        <td>Maximális órajel:</td>
+        <td>{{ processor?.boostClock }}</td>
+      </tr>
+      <tr>
+        <td>Foglalat:</td>
+        <td>{{ processor?.socket }}</td>
+      </tr>
+    </table>
+
+    <a class="btn btn-outline-primary mt-3" (click)="edit(processor)"
+      >Módosítás</a
+    >
+    <a class="btn btn-outline-danger mt-3 float-end" (click)="delete(processor)"
+      >Törlés</a
+    >
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div
+  class="container p-3 cardList rounded-5 shadow-lg d-flex justify-content-center gap-3 flex-wrap mt-4"
+>
+  <div class="row"></div>
+  @for (item of processors; track $index) {
+  <app-processor-card
+    [processor]="item"
+    (Delete)="delete($event)"
+    (Edit)="edit($event)"
+  ></app-processor-card>
+  }
+</div>
