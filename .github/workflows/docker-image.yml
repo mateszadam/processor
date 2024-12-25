@@ -1,0 +1,30 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["master"]
+    paths:
+      - "html/**"
+  pull_request:
+    branches: ["master"]
+    paths:
+      - "html/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Image Tag
+        run: |
+          echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: |
+          cd html
+
+          docker build . --file Dockerfile --tag ghcr.io/mateszadam/web_test_for_azure:$IMAGE_TAG --tag ghcr.io/mateszadam/proceccorsList:latest
+          docker login ghcr.io -u mateszadam -p ${{secrets.GHCL_TOKEN}}
+          docker push ghcr.io/mateszadam/proceccorsList:$IMAGE_TAG
+          docker push ghcr.io/mateszadam/proceccorsList:latest
