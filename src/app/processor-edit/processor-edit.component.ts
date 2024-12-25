@@ -50,36 +50,36 @@ export class ProcessorEditComponent {
     ) {
       this.errorMessage = 'Minden mező kitöltése kötelező.';
       isValid = false;
-    } else if (isNaN(newP.price) || newP.price <= 0) {
+    } else if (isNaN(newP.price) || +newP.price <= 0) {
       this.errorMessage = 'Az árnak pozitív számnak kell lennie.';
       isValid = false;
-    } else if (isNaN(newP.coreCount) || newP.coreCount <= 0) {
-      alert('A magok számnak 0 nál nagyobbnak kell lennie.');
+    } else if (isNaN(newP.coreCount) || +newP.coreCount <= 0) {
+      this.errorMessage = 'A magok számnak 0 nál nagyobbnak kell lennie.';
       isValid = false;
-    } else if (isNaN(newP.threadCount) || newP.threadCount <= 0) {
+    } else if (isNaN(newP.threadCount) || +newP.threadCount <= 0) {
       this.errorMessage = 'A szálak számnak 0 nál nagyobbnak kell lennie.';
       isValid = false;
-    } else if (isNaN(newP.baseClock) || newP.baseClock <= 0) {
+    } else if (isNaN(newP.baseClock) || +newP.baseClock <= 0) {
       this.errorMessage = 'Az alap órajelnek  0 nál nagyobbnak kell lennie.';
       isValid = false;
-    } else if (isNaN(newP.boostClock) || newP.boostClock <= 0) {
+    } else if (isNaN(newP.boostClock) || +newP.boostClock <= 0) {
       this.errorMessage = 'A turbó órajelnek  0 nál nagyobbnak kell lennie.';
       isValid = false;
-    } else if (newP.coreCount > newP.threadCount) {
+    } else if (+newP.coreCount > +newP.threadCount) {
       this.errorMessage =
         'A szálak számának nagyobbnak kell lennie mint a magok számának.';
       isValid = false;
-    } else if (newP.baseClock > newP.boostClock) {
+    } else if (+newP.baseClock > +newP.boostClock) {
       this.errorMessage =
         'A turbó órajelnek nagyobbnak kell lennie mint az alap órajelnek.';
       isValid = false;
-    } else if (newP.name.length > 20) {
+    } else if (+newP.name.length > 20) {
       this.errorMessage = 'A név maximum 20 karakter lehet.';
       isValid = false;
-    } else if (newP.manufacturer.length > 20) {
+    } else if (+newP.manufacturer.length > 20) {
       this.errorMessage = 'A gyártó maximum 20 karakter lehet.';
       isValid = false;
-    } else if (newP.socket.length > 10) {
+    } else if (+newP.socket.length > 10) {
       this.errorMessage = 'A foglalat maximum 10 karakter lehet.';
       isValid = false;
     }
