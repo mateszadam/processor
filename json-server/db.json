@@ -1,0 +1,59 @@
+{
+  "processors": [
+    {
+      "name": "Ryzen 5 3600",
+      "manufacturer": "AMD",
+      "price": "199.99",
+      "socket": "AM4",
+      "coreCount": "6",
+      "threadCount": "12",
+      "baseClock": "3.6",
+      "boostClock": "4.2",
+      "id": "1"
+    },
+    {
+      "name": "Core i7-9700K",
+      "manufacturer": "Intel",
+      "price": "374.66",
+      "socket": "LGA1151",
+      "coreCount": "2",
+      "threadCount": "8",
+      "baseClock": "2",
+      "boostClock": "4",
+      "id": "2"
+    },
+    {
+      "name": "Ryzen 9 3900X",
+      "manufacturer": "AMD",
+      "price": "499.99",
+      "socket": "AM4",
+      "coreCount": "12",
+      "threadCount": "24",
+      "baseClock": "3.8",
+      "boostClock": "4.6",
+      "id": "3"
+    },
+    {
+      "name": "Ryzen 9 3900X",
+      "manufacturer": "AMD",
+      "price": "499.99",
+      "socket": "AM4",
+      "coreCount": "20",
+      "threadCount": "20",
+      "baseClock": "3.8",
+      "boostClock": "80",
+      "id": "4"
+    },
+    {
+      "name": "Matesz Ádám",
+      "manufacturer": "sad",
+      "price": "20",
+      "socket": "AAA",
+      "coreCount": "19",
+      "threadCount": "2",
+      "baseClock": "2",
+      "boostClock": "32",
+      "id": "49e2"
+    }
+  ]
+}

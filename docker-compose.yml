@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  json-server:
+    build: ./json-server
+    ports:
+      - 3000:3000
+  html:
+    build: .
+    ports:
+      - 8001:80
+    depends_on:
+      - json-server
