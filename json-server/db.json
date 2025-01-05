@@ -43,17 +43,6 @@
       "baseClock": "3.8",
       "boostClock": "80",
       "id": "4"
-    },
-    {
-      "name": "Matesz Ádám",
-      "manufacturer": "sad",
-      "price": "20",
-      "socket": "AAA",
-      "coreCount": "19",
-      "threadCount": "2",
-      "baseClock": "2",
-      "boostClock": "32",
-      "id": "49e2"
     }
   ]
 }
