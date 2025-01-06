@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build the Docker image
         run: |
-          docker build . --file Dockerfile --tag ghcr.io/mateszadam/proceccors-list:$IMAGE_TAG --tag ghcr.io/mateszadam/proceccors-list:latest
+          docker build . --file Dockerfile --tag ghcr.io/mateszadam/processors:$IMAGE_TAG --tag ghcr.io/mateszadam/processors:latest
           docker login ghcr.io -u mateszadam -p ${{secrets.GHCL_TOKEN}}
-          docker push ghcr.io/mateszadam/proceccors-list:$IMAGE_TAG
-          docker push ghcr.io/mateszadam/proceccors-list:latest
+          docker push ghcr.io/mateszadam/processors:$IMAGE_TAG
+          docker push ghcr.io/mateszadam/processors:latest
